@@ -139,7 +139,6 @@ const plantingTimes = {
         "12": "February",
         "13": "February"
     },
-    // Add all other vegetables and flowers here...
     "black-eyed-susan": {
         "1": "Late April to Early May",
         "2": "Mid April to Early May",
