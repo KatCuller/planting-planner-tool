@@ -64,7 +64,37 @@ const plantingTimes = {
         "12": "February to March",
         "13": "March"
     },
-    // Other vegetables and flowers go here...
+    "bell-pepper": {
+        "1": "Late May to Early June",
+        "2": "Late May",
+        "3": "Mid May",
+        "4": "Mid May",
+        "5": "Last two weeks of May",
+        "6": "Late May to June",
+        "7": "Late May",
+        "8": "Early June",
+        "9": "Early June",
+        "10": "Early June",
+        "11": "Mid June",
+        "12": "Early June",
+        "13": "Mid June"
+    },
+    "zucchini": {
+        "1": "Late May",
+        "2": "Late May to June",
+        "3": "Late May",
+        "4": "Late May",
+        "5": "Late May to June",
+        "6": "Early June",
+        "7": "May to Early June",
+        "8": "Early June",
+        "9": "Early June",
+        "10": "Mid June",
+        "11": "Mid June",
+        "12": "Early June",
+        "13": "Mid June"
+    },
+    // Add other vegetables and flowers here ...
 };
 
 // Disable vegetable or flower dropdown based on selection
@@ -99,10 +129,18 @@ function updatePlantingTime() {
         // Debugging: Log the planting times to ensure we are accessing them correctly
         console.log("Planting times:", plantingTimes);
 
-        if (vegetable && plantingTimes[vegetable] && plantingTimes[vegetable][zone]) {
-            plantingTime = plantingTimes[vegetable][zone];
-        } else if (flower && plantingTimes[flower] && plantingTimes[flower][zone]) {
-            plantingTime = plantingTimes[flower][zone];
+        if (vegetable) {
+            console.log(`Vegetable selected: ${vegetable}`);
+            if (plantingTimes[vegetable] && plantingTimes[vegetable][zone]) {
+                plantingTime = plantingTimes[vegetable][zone];
+            }
+        }
+
+        if (flower) {
+            console.log(`Flower selected: ${flower}`);
+            if (plantingTimes[flower] && plantingTimes[flower][zone]) {
+                plantingTime = plantingTimes[flower][zone];
+            }
         }
     }
 
