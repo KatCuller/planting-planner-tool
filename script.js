@@ -423,7 +423,9 @@ const plantingTimes = {
     "11": "Mid June",
     "12": "Early June",
     "13": "June"
-};
+}
+
+};    
 
 // Disable vegetable or flower dropdown based on selection
 document.getElementById('vegetable').addEventListener('change', function() {
