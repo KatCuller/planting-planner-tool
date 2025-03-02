@@ -447,9 +447,10 @@ function updatePlantingTime() {
     const vegetable = document.getElementById('vegetable').value;
     const flower = document.getElementById('flower').value;
 
-    console.log(`Selected Zone: ${zone}`);  // Debugging output
-    console.log(`Selected Vegetable: ${vegetable}`);  // Debugging output
-    console.log(`Selected Flower: ${flower}`);  // Debugging output
+    console.log("Planting Times Object: ", plantingTimes);  // Check if the object is loaded
+    console.log(`Selected Zone: ${zone}`);
+    console.log(`Selected Vegetable: ${vegetable}`);
+    console.log(`Selected Flower: ${flower}`);
 
     let plantingTime = "";
 
