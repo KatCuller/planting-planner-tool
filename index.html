@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planting Planner Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Planting Planner Tool</h1>
+        
+        <!-- USDA Planting Zone Map Image -->
+        <div id="zone-image-container">
+            <h2>Find Your Planting Zone:</h2>
+            <img src="img/planting-zone-map.jpg" alt="USDA Planting Zones Map" id="zone-map">
+        </div>
+
+        <!-- Planting Zone Dropdown -->
+        <label for="zone">Select Your Planting Zone:</label>
+        <select id="zone" name="zone">
+            <option value="">Select a Zone</option>
+            <option value="3">Zone 3</option>
+            <option value="4">Zone 4</option>
+            <option value="5">Zone 5</option>
+            <option value="6">Zone 6</option>
+            <option value="7">Zone 7</option>
+            <option value="8">Zone 8</option>
+            <option value="9">Zone 9</option>
+            <option value="10">Zone 10</option>
+            <option value="11">Zone 11</option>
+        </select>
+
+        <!-- Vegetable Dropdown -->
+        <label for="vegetable">Select Vegetable:</label>
+        <select id="vegetable" name="vegetable">
+            <option value="">Select a Vegetable</option>
+            <option value="tomato">Tomatoes</option>
+            <option value="cucumber">Cucumbers</option>
+            <option value="lettuce">Lettuce</option>
+            <option value="carrot">Carrots</option>
+            <option value="bell-pepper">Bell Peppers</option>
+            <option value="zucchini">Zucchini</option>
+        </select>
+
+        <!-- Flower Dropdown -->
+        <label for="flower">Select Flower:</label>
+        <select id="flower" name="flower">
+            <option value="">Select a Flower</option>
+            <option value="black-eyed-susan">Black-eyed Susan</option>
+            <option value="cone-flower">Coneflower</option>
+            <option value="daylilies">Daylilies</option>
+            <option value="lavender">Lavender</option>
+            <option value="peony">Peony</option>
+        </select>
+
+        <!-- Planting Time Output -->
+        <div id="planting-time-output">
+            <p><strong>Planting Time:</strong> <span id="planting-time"></span></p>
+        </div>
+
+        <!-- Information Sections -->
+        <div id="info">
+            <h2>What is this tool?</h2>
+            <p>This tool helps you find the best planting time for vegetables and flowers based on your USDA hardiness zone.</p>
+
+            <h2>How to use this Tool?</h2>
+            <p>Select your planting zone and then choose either a vegetable or a flower to receive the optimal planting time.</p>
+
+            <h2>FAQs</h2>
+            <ul>
+                <li><strong>Q:</strong> What if I don't know my planting zone? <strong>A:</strong> You can find your planting zone on the map above.</li>
+                <li><strong>Q:</strong> Can I use this tool for both vegetables and flowers? <strong>A:</strong> Yes, you can choose either vegetables or flowers, but not both at the same time.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
