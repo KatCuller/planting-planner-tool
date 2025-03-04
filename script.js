@@ -1,4 +1,4 @@
-// Fetch the planting times data from the JSON file
+// Fetch the planting times data from the GitHub raw URL
 fetch('https://raw.githubusercontent.com/KatCuller/planting-planner-tool/main/data.json')
   .then(response => response.json())
   .then(data => {
@@ -17,20 +17,21 @@ fetch('https://raw.githubusercontent.com/KatCuller/planting-planner-tool/main/da
     vegetableSelect.innerHTML += '<option value="">Select a Vegetable</option>';
     flowerSelect.innerHTML += '<option value="">Select a Flower</option>';
 
-    // Populate the vegetable dropdown
-    for (const vegetable in plantingTimes) {
+    // Populate the vegetable dropdown with vegetables only
+    const vegetables = Object.keys(plantingTimes); // Get all vegetable keys from the data
+    vegetables.forEach(vegetable => {
       vegetableSelect.innerHTML += `<option value="${vegetable}">${capitalizeFirstLetter(vegetable)}</option>`;
-    }
+    });
 
-    // Populate the flower dropdown with the flowers we are using
+    // Populate the flower dropdown manually
     const flowers = [
       "daylilies", "lavender", "cone-flower", "black-eyed-susan", "astilbe", 
       "hosta", "peony", "shasta-daisy", "sedum", "coral-bells"
     ];
 
-    for (const flower of flowers) {
+    flowers.forEach(flower => {
       flowerSelect.innerHTML += `<option value="${flower}">${capitalizeFirstLetter(flower.replace("-", " "))}</option>`;
-    }
+    });
 
   })
   .catch(error => {
