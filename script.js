@@ -423,7 +423,7 @@ const plantingTimes = {
     "11": "Mid June",
     "12": "Early June",
     "13": "June"
-}
+},
 
 };    
 
